@@ -37,29 +37,35 @@ Hardware – PCs, Cyclone II , USB flasher
 
 Developed by: RegisterNumber:*/ S.SELVARANI:212224040301
 ```
-module boolean(f_and, f_or, f_not, f_nor, f_nand, f_xor, f_xnor,a,b);
-input a,b;
-output f_and, f_or, f_not, f_nor, f_nand, f_xor, f_xnor;
-and(f_and, a,b);
-or(f_or,a,b);
-not(f_not,a);
-nand(f_nand, a,b);
-nor (f_nor, a,b);
-xor(f_xor,a,b);
-xnor(f_xnor,a,b);
- endmodule 
+module EX2(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~b&~d|a&b&~c|~a&b&d));
+endmodule
 ```
-  
+```
+module EXP2(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y&z|x&y|w&y));
+endmodule 
 
-
+```
+ 
 **RTL realization**
+![Screenshot (213)](https://github.com/user-attachments/assets/e6ad40c2-d018-4a0e-9f5f-6da9f8907f81)
 
 
 **Output:**
+![Screenshot (214)](https://github.com/user-attachments/assets/ba7622fa-bfac-42d3-8cce-e580547d359b)
+
 
 **RTL**
+![Screenshot (215)](https://github.com/user-attachments/assets/3281d1ad-db9f-4166-8d1c-964767c128c1)
+
 
 **Timing Diagram**
+![Screenshot (216)](https://github.com/user-attachments/assets/0bdfeb8b-19c0-4beb-84a7-5970357e8d13)
 
 **Result:**
 
